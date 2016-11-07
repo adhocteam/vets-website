@@ -21,7 +21,7 @@ majorlinks:
   <div class="row">
     <div class="small-12 columns">
       <div class="pitch">
-        <h2 class="tagline"><span>Get the VA services that you've earned.</span></h2>
+        <h2 class="tagline"><span>Get the VA services that you’ve earned.</span></h2>
       </div>
     </div>
   </div>
@@ -59,7 +59,7 @@ majorlinks:
 
 <div class="row text-center">
 <div class="column-padded text-center mx-auto medium-8 stars-tagline">
-  <h2>The Department of Veterans Affairs is working hard to make it easier for you to get the services you've earned.</h2>
+  <h2>The Department of Veterans Affairs is working hard to make it easier for you to get the services you’ve earned.</h2>
 </div>
 </div>
 </div>
