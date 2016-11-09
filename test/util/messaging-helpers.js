@@ -1,3 +1,5 @@
+const request = require('request');
+
 export const testData = {
   folders: {
     data: [
@@ -27,19 +29,49 @@ export const testData = {
       {
         attributes: {
           messageId: 123,
-          body: 'testing 123'
+          body: 'testing 123',
+          category: "MEDICATIONS",
+          subject: "CARBAMAZEPINE",
+          body: null,
+          attachment: false,
+          sentDate: "2016-11-07T16:05:15.000Z",
+          senderId: 2,
+          senderName: "DEFGHIJ, ABC",
+          recipientId: 0,
+          recipientName: "QRSTUV, KLMNOP",
+          readReceipt: "READ"
         }
       },
       {
         attributes: {
           messageId: 456,
-          body: 'testing 456'
+          body: 'testing 456',
+          category: "MEDICATIONS",
+          subject: "CARBAMAZEPINE",
+          body: null,
+          attachment: false,
+          sentDate: "2016-11-07T16:05:15.000Z",
+          senderId: 4,
+          senderName: "DEFGHIJ, ABC",
+          recipientId: 1,
+          recipientName: "QRSTUV, KLMNOP",
+          readReceipt: "READ"
         }
       },
       {
         attributes: {
           messageId: 789,
-          body: 'testing 789'
+          body: 'testing 789',
+          category: "MEDICATIONS",
+          subject: "CARBAMAZEPINE",
+          body: null,
+          attachment: false,
+          sentDate: "2016-11-07T16:05:15.000Z",
+          senderId: 6,
+          senderName: "DEFGHIJ, ABC",
+          recipientId: 2,
+          recipientName: "QRSTUV, KLMNOP",
+          readReceipt: "READ"
         }
       }
     ],
@@ -77,5 +109,26 @@ export const testData = {
         }
       }
     ]
-  }
+  }  
 };
+
+function initApplicationSubmitMock() {
+  request({
+    uri: `${E2eHelpers.apiUrl}/mock`,
+    method: 'POST',
+    json: {
+      path: '/api/hca/v1/application',
+      verb: 'post',
+      value: {
+        formSubmissionId: '123fake-submission-id-567',
+        timeStamp: '2016-05-16'
+      }
+    }
+  });
+}
+
+module.exports = {
+  testData,
+  initApplicationSubmitMock
+};
+
